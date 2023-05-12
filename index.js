@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
-const a = "https://corpo-back.vercel.app";
+const a = "https://corpo-front.vercel.app";
 
 const app = express();
 const PORT = process.env.PORT;
