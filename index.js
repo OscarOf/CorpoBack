@@ -9,7 +9,7 @@ const PORT = 3000;
 const connectionOptions ={ useUnifiedTopology: true,
     useNewUrlParser: true, useFindAndModify: false};
 
-    head('Access-Control-Allow-Origin', '*')
+Headers('Access-Control-Allow-Origin', '*');
 
 app.use(express.json());
 app.use(cors());
