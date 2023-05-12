@@ -16,7 +16,7 @@ const connectionOptions ={ useUnifiedTopology: true,
     useNewUrlParser: true, useFindAndModify: false};
 
 app.use(express.json());
-app.use(cors(header('Access-Control-Allow-Origin', '*')));
+app.use(cors(corsOptions));
 
 mongoose.connect("mongodb+srv://fundacionsemillac3:1235@fundacionsemilladonacio.j2cjyrm.mongodb.net/?retryWrites=true&w=majority").then(() => console.log("Connected Successfully")).catch((err) => console.log(err));
 
