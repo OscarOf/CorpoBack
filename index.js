@@ -8,7 +8,7 @@ const PORT = process.env.PORT;
 const connectionOptions ={ useUnifiedTopology: true,
     useNewUrlParser: true, useFindAndModify: false};
 
-app.use(cors({origin: "*"}));
+app.use(cors({origin: "*", methods: ['GET', 'POST', 'PUT', 'DELETE']}));
 app.use(express.json());
 
 
