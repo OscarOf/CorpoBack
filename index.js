@@ -8,8 +8,9 @@ const PORT = process.env.PORT;
 const connectionOptions ={ useUnifiedTopology: true,
     useNewUrlParser: true, useFindAndModify: false};
 
-app.use(express.json());
 app.use(cors({origin: "*"}));
+app.use(express.json());
+
 
 mongoose.connect("mongodb+srv://fundacionsemillac3:1235@fundacionsemilladonacio.j2cjyrm.mongodb.net/?retryWrites=true&w=majority").then(() => console.log("Connected Successfully")).catch((err) => console.log(err));
 
