@@ -11,8 +11,7 @@ router.get("/table", cAuth, getForm);
 //Crear Formulario
 router.post("/new", async (req, res)=>{
     try {
-        const {type, nit_cedula, name, email, phone, destination_don, certification, aditional} = req.body;
-        req.header('Access-Control-Allow-Origin', '*');
+        const {type, nit_cedula, name, email, phone, destination_don, certification, aditional} = req.body;        
         const newForm = await FormModel.create({
             type, nit_cedula, name, email, phone, destination_don, certification, aditional
         });
