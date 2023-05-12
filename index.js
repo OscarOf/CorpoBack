@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const { head } = require("./routes");
 
 const app = express()
 const PORT = 3000;
@@ -8,6 +9,7 @@ const PORT = 3000;
 const connectionOptions ={ useUnifiedTopology: true,
     useNewUrlParser: true, useFindAndModify: false};
 
+    head('Access-Control-Allow-Origin', '*')
 
 app.use(express.json());
 app.use(cors());
