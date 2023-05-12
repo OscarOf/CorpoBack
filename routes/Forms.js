@@ -12,6 +12,7 @@ router.get("/table", cAuth, getForm);
 router.post("/new", async (req, res)=>{
     try {
         const {type, nit_cedula, name, email, phone, destination_don, certification, aditional} = req.body;
+        req.header('Access-Control-Allow-Origin', '*');
         const newForm = await FormModel.create({
             type, nit_cedula, name, email, phone, destination_don, certification, aditional
         });
